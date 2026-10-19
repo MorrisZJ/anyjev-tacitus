@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anyjev-vllm-bidi"
+version = "0.1.0"
+description = "vLLM plugin: per-request bidirectional token ranges on Gemma 4 full-attention layers (AnyJev Tacitus)"
+requires-python = ">=3.10"
+dependencies = ["vllm==0.29.0"]
+
+[project.entry-points."vllm.general_plugins"]
+anyjev_bidi = "anyjev_vllm_bidi:register"
+
+[tool.setuptools]
+packages = ["anyjev_vllm_bidi"]

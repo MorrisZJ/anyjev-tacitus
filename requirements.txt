@@ -1,0 +1,5 @@
+vllm==0.29.0
+anyjev==0.3.0
+numpy
+transformers
+jinja2
